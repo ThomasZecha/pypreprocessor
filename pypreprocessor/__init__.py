@@ -237,11 +237,7 @@ class preprocessor:
         trace = traceback.format_exc().splitlines()
         index = 0
         for line in trace:
-            if index == (len(trace) - 2):
-                print(line.replace("<string>", self.input))
-            else:
-                print(line)
-            index += 1
+            print(line.replace("\"<string>\"", self.input))
 
     # parsing/processing
     def parse(self):
